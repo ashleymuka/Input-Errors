@@ -1,14 +1,11 @@
 '''
-Author: Ashley Muka
-Assignment Title: Input Errors
-Assignment Description: output the largest of three input integers
-Due Date:09/15/2023
-Date created:09/15/2023
-Date Last Modified:09/15/2023
+Description: output the largest of three input integers.
+Use a try block to perform all the statements. 
+Use an except block to catch any EOFErrors caused by missing inputs, 
+output the number of inputs read, and output the largest value or "No max" if no inputs are read.
 
 '''
 
-#input
 try:
     num1 = int(input())
     num2 = int(input())
@@ -18,8 +15,6 @@ try:
    
     max_num = max(num1, num2, num3)
     print(max_num)
-
-#process
 
 except EOFError:
     inputs_read = 0
@@ -35,7 +30,6 @@ except ValueError:
         inputs_read = 0
         max_num = None
 
-#output
 if inputs_read == 0:
     print(f"{inputs_read} input(s) read:")
     print("No max")
